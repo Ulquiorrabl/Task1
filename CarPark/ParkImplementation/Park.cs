@@ -12,6 +12,8 @@ namespace Task1.CarPark.ParkImplementation
     {
         private List<Car> carPark;
 
+        public int Length { get { return carPark.Count; } }
+
         public Park()
         {
             carPark = new List<Car>();
