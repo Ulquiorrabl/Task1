@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Task1.CarPark.ParkImplementation;
 using Task1.Cars;
+using Task1.Cars.CarClasses;
+using Task1.Cars.CarEngine;
+using Task1.Cars.CarClasses.PassengerCarClasses;
+using Task1.States.ComfortStates;
 
 namespace Task1
 {
@@ -13,6 +17,9 @@ namespace Task1
         static Park taxiPark = new Park();
         static void Main(string[] args)
         {
+            taxiPark.Add(new CargoCar("Lada", "Largus", 130, 16.6f, 4000, "WIN1", new Engine("V4", 200, 130), 250f));
+            taxiPark.Add(new EconomPassengerCar("Lada", "Vesta", 160, 12.6f, 3000, "WIN2", new Engine("V6", 150, 140), 5));
+            taxiPark.Add(new LuxePassengerCar("Volkswagen", "Polo Sedan", 170, 9.6f, 3500, "WIN3", new Engine("V6", 140, 160), 5, ComfortState.High));
             bool menu = true;
             while (menu)
             {
@@ -85,12 +92,12 @@ namespace Task1
         {
             Console.Clear();
             Console.WriteLine("All cars:");
-            Console.WriteLine("Car - id - Manufacturer - Model - Top Speed - Fuel Consumption - WIN");
+            Console.WriteLine("Car - id - Manufacturer - Model - Top Speed - Fuel Consumption - WIN - CarType");
             Car car;
             for(int i=0; i < taxiPark.Length; i++)
             {
                 car = taxiPark.GetCarById(i);
-                Console.WriteLine("Car {0}: \t{1} \t{2} \t{3} \t{4} \t{5}", i, car.Manufacturer, car.Model, car.TopSpeed, car.FuelConsumption, car.WIN);
+                Console.WriteLine("Car {0}: \t{1} \t{2} \t{3} \t{4} \t{5} \t{6}", i, car.Manufacturer, car.Model, car.TopSpeed, car.FuelConsumption, car.WIN, car.GetType().Name);
             }
             Console.WriteLine("Enter any key to continue...");
             Console.ReadKey();
