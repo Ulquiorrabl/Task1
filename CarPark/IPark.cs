@@ -13,7 +13,7 @@ namespace Task1.CarPark
         ParkState SortByConsumption();
         ParkState Add(Car car);
         ParkState Remove(int win);
-        Car FindCarByTopSpeed(int topspeed);
+        Car FindCarByTopSpeed(float minSpeed, float maxSpeed);
         float TotalCost();
     }
 }

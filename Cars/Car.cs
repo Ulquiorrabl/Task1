@@ -10,17 +10,18 @@ namespace Task1.Cars
     {
         public string Manufacturer { private set; get; }
         public string Model { private set; get; }
-        public int TopSpeed { private set; get; }
+        public float TopSpeed { private set; get; }
         public float FuelConsumption { private set; get; }
         public float Cost { private set; get; }
         public string WIN { private set; get; }
 
-        public Car (string manufacturer, string model, int topspeed, float fuelconsumption, float cost, string win)
+
+        public Car (string manufacturer, string model, float topSpeed, float fuelConsumption, float cost, string win)
         {
             this.Manufacturer = manufacturer;
             this.Model = model;
-            this.TopSpeed = topspeed;
-            this.FuelConsumption = fuelconsumption;
+            this.TopSpeed = topSpeed;
+            this.FuelConsumption = fuelConsumption;
             this.Cost = cost;
             this.WIN = win;
         }

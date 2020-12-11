@@ -45,11 +45,11 @@ namespace Task1.CarPark.ParkImplementation
             return ParkState.Success;
         }
 
-        public Car FindCarByTopSpeed(int topspeed)
+        public Car FindCarByTopSpeed(float minSpeed, float maxSpeed)
         {
             for(int i = 0; i < carPark.Count; i++)
             {
-                if(carPark[i].TopSpeed == topspeed)
+                if(carPark[i].TopSpeed >= minSpeed && carPark[i].TopSpeed <= maxSpeed)
                 {
                     return carPark[i];
                 }
