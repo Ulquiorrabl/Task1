@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task1.Cars.CarEngine;
 
 namespace Task1.Cars
 {
@@ -15,6 +16,8 @@ namespace Task1.Cars
         public float Cost { private set; get; }
         public string WIN { private set; get; }
 
+        Engine engine;
+
 
         public Car (string manufacturer, string model, float topSpeed, float fuelConsumption, float cost, string win)
         {
@@ -24,6 +27,17 @@ namespace Task1.Cars
             this.FuelConsumption = fuelConsumption;
             this.Cost = cost;
             this.WIN = win;
+        }
+
+        public Car(string manufacturer, string model, float topSpeed, float fuelConsumption, float cost, string win, Engine engine)
+        {
+            this.Manufacturer = manufacturer;
+            this.Model = model;
+            this.TopSpeed = topSpeed;
+            this.FuelConsumption = fuelConsumption;
+            this.Cost = cost;
+            this.WIN = win;
+            this.engine = engine;
         }
     }
 }

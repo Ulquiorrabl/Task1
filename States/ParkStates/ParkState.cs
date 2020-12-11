@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task1.States
+namespace Task1.States.ParkStates
 {
     enum ParkState
     {

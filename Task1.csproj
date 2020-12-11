@@ -46,10 +46,16 @@
     <Compile Include="Cars\Car.cs" />
     <Compile Include="CarPark\IPark.cs" />
     <Compile Include="CarPark\ParkImplementation\Park.cs" />
+    <Compile Include="Cars\CarClasses\CargoCar.cs" />
+    <Compile Include="Cars\CarClasses\PassengerCar.cs" />
+    <Compile Include="Cars\CarClasses\PassengerCarClasses\EconomPassengerCar.cs" />
+    <Compile Include="Cars\CarClasses\PassengerCarClasses\LuxePassengerCar.cs" />
     <Compile Include="Cars\CarComparers\CarFuelConsumptionComparer.cs" />
+    <Compile Include="Cars\CarEngine\Engine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="States\ParkState.cs" />
+    <Compile Include="States\ComfortStates\ComfortState.cs" />
+    <Compile Include="States\ParkStates\ParkState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
