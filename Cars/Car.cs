@@ -19,17 +19,7 @@ namespace Task1.Cars
         Engine engine;
 
 
-        public Car (string manufacturer, string model, float topSpeed, float fuelConsumption, float cost, string win)
-        {
-            this.Manufacturer = manufacturer;
-            this.Model = model;
-            this.TopSpeed = topSpeed;
-            this.FuelConsumption = fuelConsumption;
-            this.Cost = cost;
-            this.WIN = win;
-        }
-
-        public Car(string manufacturer, string model, float topSpeed, float fuelConsumption, float cost, string win, Engine engine)
+        public Car(string manufacturer, string model, float topSpeed, float fuelConsumption, float cost, string win, Engine engine = null)
         {
             this.Manufacturer = manufacturer;
             this.Model = model;
